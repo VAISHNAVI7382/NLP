@@ -1,4 +1,4 @@
-# CNN
+# NLP
 The purpose of this analysis is to build a prediction model to predict whether a review on the restaurant is positive or negative.
 
 With an overwhelming demand of restaurants it has therefore become important to study the demography of a location. What kind of a food is more popular in a locality?  What people prefer, and what need to be improvised to predict these all we have build a model analysing reviews of the Restaurant given by Customers as Positive or Negative or Neutral on the basis of Collected
