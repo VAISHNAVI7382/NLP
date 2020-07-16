@@ -1,0 +1,137 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Web Template</title>
+    <link href='https://fonts.googleapis.com/css?family=Barlow Condensed' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Atma' rel='stylesheet'>
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+  
+    <link href="{{ url_for('static', filename='css/style2.css') }}" rel="stylesheet"> 
+<style>
+
+input[type=submit] {
+		  background-color: 'Green';
+		  color: dark;
+		  font-weight: bold;
+		  padding: 12px 20px;
+		  border: none;
+		  border-radius: 4px;
+		  cursor: pointer;
+		  float: center;
+		  		  align:center;
+
+		}
+		input[type=text], select, textarea {
+		  width: 50%;
+		  padding: 12px;
+		  border: 1px solid #ccc;
+		  border-radius: 4px;
+		  resize: vertical;
+		  align:center;
+		}
+		
+		
+		input[type=submit]:hover {
+		  background-color: #45a049;
+		}
+		.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  margin-bottom: auto;
+}
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+</head>
+<body style="background-image:url('https://www.rhubarbgroup.com/wp-content/uploads/2019/03/home-restaurants-background.jpg.webp');">
+   
+<!--   HEADER  -->
+  
+  <header>
+      <div class="head">
+         <h1>ZOMATO REVIEW ANALYSIS</h1> 
+                                     <p class="subtitle" style="color:white;"><b> Visit <a href="https://www.zomato.com" style="color:gold;">Zomato </a> now!</b></p>
+
+      </div>
+<!--    NAVIGATION  
+         <nav>
+             <ul>
+                 <li><a href="#" class="active">Home</a></li>
+                 <li><a href="#know">Know more!</a></li>
+                 
+             </ul>
+         </nav>
+         -->
+<!--    END OF NAVIGATION  -->
+  </header>
+<!--  END OF HEADER  -->
+<!--SHOWCASE-->
+
+    <showcase>
+        <div class="container" style="text-align:center;" id="home">
+            
+            <form action="/tpredict" method="post">
+            <p></p>
+
+	      <label class="center" for="cs" style="color:white;text-align:center;font-family:'Atma';font-size:50px;"><b> GIVE A REVIEW!</b></label>
+	      <br>
+	      <input class="center" type="text" id="fname" name="review">
+	      <br><p></p>
+          <input class= "center" type="submit" value="Submit!">
+	    <p> </p>
+       </form>
+       <p style="color:white;font-size:30px;text-align:center;font-family:'Comic Sans MS'"><b>{{y}}</b></p>
+		{% if y == "Poor" %}
+	
+	  	   <p style="font-size:60px;text-align:center">&#11088;</p>
+    
+       {% elif y == "Fair" %}
+	  	   <p style="font-size:60px;text-align:center">&#11088; &#11088;</p>
+	   {% elif y == "Average" %}
+	  	   <p style="font-size:60px;text-align:center">&#11088; &#11088; &#11088;</p>
+	   {% elif y == "Good" %}
+	  	   <p style="font-size:60px;text-align:center">&#11088; &#11088; &#11088; &#11088;</p>
+	   {% elif y == "Excellent" %}
+	  	   <p style="font-size:60px;text-align:center">&#11088; &#11088; &#11088; &#11088; &#11088;</p>
+   
+    {% endif %}
+    
+        </div>
+       <!-- 
+       <div id="know" style="color:white;">
+                <h2 class="title" style="font-family:'Comic Sans MS';"> WHY DO WE NEED ? </h2>
+				<p style="font-family:'Comic Sans MS';"> Zomato is an application for rating restaurants. Thus, a large amount of reviews are accumulated in their website every day.
+				What if the reviews can be analysed and categorised by the machines on its own?
+				This application does that using Natural Language Proceesing!
+				NLP is used to analyse the sentiments from the reviews given by the customers and classify the restaurants accordingly. 
+        
+        
+        
+        </div>
+        -->
+        
+        
+            </showcase> 
+<!--   END OF SHOWCASE  -->
+     
+                           
+    
+</body>
+</html>
